@@ -1,4 +1,3 @@
 China::Engine.routes.draw do
-  get "cities" => "sharp_cities#index"
-  get "zones" => "sharp_zones#index"
+  get "cities/:id/ajax" => "sharp_cities#ajax"
 end

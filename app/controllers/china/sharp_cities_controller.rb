@@ -1,13 +1,13 @@
-require_dependency "sharp_zones/application_controller"
+require_dependency "china/application_controller"
 
-module SharpZones
+module China
   class SharpCitiesController < ApplicationController
       respond_to :html, :json
 
-      def index
-        @cities = City.where(province_code: params[:province_code])
+      def ajax
+        @cities = ChinaCity.where(parent_id: params[:id])
         respond_to do |format|
-          format.js { render 'sharp_cities/index' }
+          format.js { render 'sharp_cities/ajax' }
         end
       end
   end

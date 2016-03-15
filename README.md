@@ -1,7 +1,3 @@
-## SharpZones
-
-导入省市区数据库
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -17,7 +13,7 @@ And then execute:
 ## Usage
 
 ```
- rails g china
+ rails g china install
 
  rake db:migrate
 
