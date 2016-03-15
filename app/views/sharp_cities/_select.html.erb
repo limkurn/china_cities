@@ -1,0 +1,16 @@
+
+<%= select_tag :province_code, options_for_select(SharpZones::Province.all.collect{|i|[i.name, i.code]}), prompt: '请选择省份', 
+	data: {
+    remote: true,
+    url: '/sharp_zones/cities',
+    update: "city_code"
+  }, 
+  style: 'float:left'
+ %>
+
+<%= select_tag :city_code, options_for_select([]),
+ wrapper_html: { style: 'display: inline; float:left; margin-left:5px;' }, prompt: '请选择城市', label: false, input_html: {
+        id: 'city_code',
+        style: 'display: inline'
+      } 
+   %>

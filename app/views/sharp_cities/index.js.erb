@@ -1,0 +1,1 @@
+$("#city_code").empty().append("<%= escape_javascript(options_for_select(@cities.map{|i|[i.name, i.code]})) %>");
