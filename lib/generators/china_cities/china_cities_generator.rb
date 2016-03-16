@@ -1,6 +1,6 @@
 require 'rails/generators/active_record'
 
-class ChinaGenerator < Rails::Generators::NamedBase
+class ChinaCitiesGenerator < Rails::Generators::NamedBase
 
   include Rails::Generators::Migration
 

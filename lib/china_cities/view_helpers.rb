@@ -1,4 +1,4 @@
-module China
+module ChinaCities
   module ViewHelpers
     def zone_select_tag
 

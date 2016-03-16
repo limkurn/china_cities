@@ -2,7 +2,7 @@
 
 Add this line to your application's Gemfile:
 
-    gem 'china'
+    gem 'china_cities'
 
 
 And then execute:
