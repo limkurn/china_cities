@@ -2,7 +2,7 @@ require 'yajl'
 class ImportChinaCities < ActiveRecord::Migration
   def self.up
     ChinaCity.delete_all
-    file = File.new("#{China::Engine.root.to_s}/db/cities.json", 'r')
+    file = File.new("#{ChinaCities::Engine.root.to_s}/db/cities.json", 'r')
     parser = Yajl::Parser.new
     db = parser.parse(file)
     db.each do |province_node|

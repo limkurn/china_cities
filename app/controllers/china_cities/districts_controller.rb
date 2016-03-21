@@ -2,6 +2,10 @@ module ChinaCities
   class DistrictsController < ApplicationController
     respond_to :html, :json
 
+    def json_file
+      send_file "#{ChinaCities::Engine.root.to_s}/db/cities.json"
+    end
+
     def by_name
       city = ChinaCity.where(name:  params[:name]).first
       cities = ChinaCity.where(parent_id: city.id).map{|city|[city.name, city.name]}
