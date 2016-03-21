@@ -1,3 +1,6 @@
+
+![china_cities](https://github.com/sharp/china_cities/blob/master/city.png)
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -9,35 +12,26 @@ And then execute:
 
     bundle
 
-```
-
 ## Usage
 
-Run generator:
+#### Run generator:
 
-```
- rails g china install
-
- rake db:migrate
-
-```
-
-Add this line app/assets/javascripts/application.js
-
-```
-//= require 'jquery.china_cities'
-```
+    rails g china install
+    rake db:migrate
 
 
-Update config/routes.rb
+#### Add this line app/assets/javascripts/application.js
 
-```
-mount ChinaCities::Engine => '/china_cities'
-
-```
+    //= require 'jquery.china_cities'
 
 
-In your view add:
+
+#### Update config/routes.rb
+
+    mount ChinaCities::Engine => '/china_cities'
+
+
+#### In your view add:
 
 ```
   .city-by-name
