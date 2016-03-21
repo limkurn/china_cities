@@ -25,7 +25,7 @@ And then execute:
     //= require 'jquery.china_cities'
     $('.cities-select').china_city('by_name')
 
-Notice：`by-name` means it will generate the options with the city name value, and you can choose `by_id` and `by_code` as well.
+Notice：`by_name` means it will generate the options with the city name value, and you can choose `by_id` and `by_code` as well.
 
 
 #### Update config/routes.rb
