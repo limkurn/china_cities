@@ -20,10 +20,12 @@ And then execute:
     rake db:migrate
 
 
-#### Add this line app/assets/javascripts/application.js
+#### Add these lines to app/assets/javascripts/application.js
 
     //= require 'jquery.china_cities'
-
+    $('.cities-select').china_city('by_name')
+    
+Notice：`by-name` means it will generate the options with the city name value, and you can choose `by-id` and `by-code` as well.
 
 
 #### Update config/routes.rb
@@ -34,18 +36,16 @@ And then execute:
 #### In your view add:
 
 ```
-  .city-by-name
-    .select.city-select
-      = options_for_select(ChinaCity.provinces.map{|city|{city.name, city.name})
-    .select.city-select
-    .select.city-select
-
-  :coffee
-    $('.city-by-name').china_city('by_name')
+  .cities-select
+      = f.select :province, options_for_select(ChinaCity.provinces.map{|city|[city.name,city.name]}), { include_blank: 'please select' }, {class: 'city-select'}
+      = f.select :city, [], { include_blank: 'please select' }, {class: 'city-select'}
+      = f.select :district, [], { include_blank: 'please select' }, {class: 'city-select'}
 
 ```
 
-Notice：`.city-by-name` means it will generate the options with the city name value, and you can choose `.city-by-id` and `.city-by-code`.
+#### (optional)Modile support
+
+If you want to put a city list file to your app, you can download by the url: `/china_cities/json_file.json`
 
 
 LICENSE.
