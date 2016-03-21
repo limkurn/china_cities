@@ -16,7 +16,7 @@ And then execute:
 
 #### Run generator:
 
-    rails g china install
+    rails g china_cities install
     rake db:migrate
 
 
@@ -24,7 +24,7 @@ And then execute:
 
     //= require 'jquery.china_cities'
     $('.cities-select').china_city('by_name')
-    
+
 Notice：`by-name` means it will generate the options with the city name value, and you can choose `by-id` and `by-code` as well.
 
 
@@ -43,7 +43,7 @@ Notice：`by-name` means it will generate the options with the city name value, 
 
 ```
 
-#### (optional)Modile support
+#### Modile support (optional)
 
 If you want to put a city list file to your app, you can download by the url: `/china_cities/json_file.json`
 
