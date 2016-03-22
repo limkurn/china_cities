@@ -5,7 +5,7 @@
 
 Add this line to your application's Gemfile:
 
-    gem 'china_cities'
+    gem 'china_cities', '~> 1.0'
 
 
 And then execute:
@@ -36,10 +36,10 @@ Notice：`by-name` means it will generate the options with the city name value, 
 #### In your view add:
 
 ```
-  .cities-select
-      = f.select :province, options_for_select(ChinaCity.provinces.map{|city|[city.name,city.name]}), { include_blank: 'please select' }, {class: 'city-select'}
-      = f.select :city, [], { include_blank: 'please select' }, {class: 'city-select'}
-      = f.select :district, [], { include_blank: 'please select' }, {class: 'city-select'}
+.cities-select
+    = f.select :province, options_for_select(ChinaCity.provinces.map{|city|[city.name,city.name]}), { include_blank: 'please select' }, {class: 'city-select'}
+    = f.select :city, [], { include_blank: 'please select' }, {class: 'city-select'}
+    = f.select :district, [], { include_blank: 'please select' }, {class: 'city-select'}
 
 ```
 

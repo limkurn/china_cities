@@ -9,18 +9,15 @@ class ImportChinaCities < ActiveRecord::Migration
       cities_nodes = province_node['cities']
       options = province_node.delete_if {|k,v|k == 'cities'}
       province = ChinaCity.create! options
-      puts province.name
       if cities_nodes
         cities_nodes.each do |city_node|
           district_nodes = city_node['cities']
           options = city_node.delete_if {|k,v|k == 'cities'}
           city = ChinaCity.create! options.merge!({'parent_id' => province.id })
-          puts city.name
           if district_nodes
             district_nodes.each do |district_node|
               options = district_node.delete_if {|k,v|k == 'cities'}
               district = ChinaCity.create! options.merge!({'parent_id' => city.id})
-              puts district.name
             end
           end
         end

@@ -11,7 +11,7 @@ class ChinaCitiesGenerator < Rails::Generators::NamedBase
   end
 
   def generate_migration
-    migration_template 'create_china_cities.rb', "db/migrate/create_sharp_cities.rb"
+    migration_template 'create_china_cities.rb', "db/migrate/create_china_cities.rb"
     migration_template 'import_china_cities.rb', "db/migrate/import_china_cities.rb"
   end
 
