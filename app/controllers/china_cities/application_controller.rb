@@ -1,6 +1,6 @@
 module ChinaCities
   class ApplicationController < ActionController::Base
-    before_filter :set_locale
+    before_action :set_locale
 
     def set_locale
       if params[:locale]
